@@ -1,21 +1,19 @@
 import PropTypes from 'prop-types';
 import React from 'react'
-import { 
-  Row, 
-  Col, 
-  Input, 
-  Badge, 
-  Button, 
-  ListGroupItem, 
-  Collapse, 
-  Label, 
-  CustomInput, 
-  FormFeedback
+import {
+  Row,
+  Col,
+  Input,
+  Badge,
+  Button,
+  ListGroupItem,
+  Collapse,
+  Label
 } from 'reactstrap';
 
 const propTypes = {
-  email: PropTypes.string.isRequired, 
-  step1: PropTypes.bool.isRequired, 
+  email: PropTypes.string.isRequired,
+  step1: PropTypes.bool.isRequired,
   toggle: PropTypes.func.isRequired,
   stepsUnlock: PropTypes.func.isRequired,
   onChangeEmail: PropTypes.func.isRequired,
@@ -24,7 +22,7 @@ const propTypes = {
 };
 
 const CheckoutStepOne = ({
-  styles, 
+  styles,
   email,
   step1,
   toggle,
@@ -44,22 +42,22 @@ const CheckoutStepOne = ({
       <Label for="exampleEmail">Почта</Label>
       <Row>
         <Col md="6">
-          <Input 
-            invalid={!emailIsValid}  
-            type="email" 
-            name="email" 
-            id="exampleEmail" 
-            placeholder="example@gmail.com" 
-            value={email} 
+          <Input
+            invalid={!emailIsValid}
+            type="email"
+            name="email"
+            id="exampleEmail"
+            placeholder="example@gmail.com"
+            value={email}
             onChange={onChangeEmail}
           />
-        
+
         </Col>
         <Col md="6">
           <Button disabled={false} onClick={()=>{
-            if (emailValidation) { 
+            if (emailValidation) {
               stepsUnlock('step2');
-              handleEmailValidation(true) 
+              handleEmailValidation(true)
             } else {
               handleEmailValidation(false)
             }

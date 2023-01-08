@@ -1,31 +1,30 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { 
-  Row, 
-  Col, 
-  Input, 
-  Badge, 
-  Button, 
-  ListGroupItem, 
-  Collapse, 
-  Label, 
-  Alert,
-  FormGroup
+import {
+  Row,
+  Col,
+  Input,
+  Badge,
+  Button,
+  ListGroupItem,
+  Collapse,
+  Label,
+  Alert
 } from 'reactstrap';
 
 const propTypes = {
   addUserAddress: PropTypes.func.isRequired,
-  step2: PropTypes.bool.isRequired,  
-  step2Unlock: PropTypes.bool.isRequired, 
-  firstName: PropTypes.string.isRequired, 
-  lastName: PropTypes.string.isRequired, 
-  country: PropTypes.string.isRequired, 
-  city: PropTypes.string.isRequired, 
-  province: PropTypes.string.isRequired, 
-  postalCode: PropTypes.number.isRequired, 
-  phoneNumber: PropTypes.number.isRequired, 
-  address1: PropTypes.string.isRequired, 
-  address2: PropTypes.string.isRequired, 
+  step2: PropTypes.bool.isRequired,
+  step2Unlock: PropTypes.bool.isRequired,
+  firstName: PropTypes.string.isRequired,
+  lastName: PropTypes.string.isRequired,
+  country: PropTypes.string.isRequired,
+  city: PropTypes.string.isRequired,
+  province: PropTypes.string.isRequired,
+  postalCode: PropTypes.number.isRequired,
+  phoneNumber: PropTypes.number.isRequired,
+  address1: PropTypes.string.isRequired,
+  address2: PropTypes.string.isRequired,
   shippingMethod: PropTypes.number.isRequired,
   formIsValid: PropTypes.bool.isRequired,
   onChangeFirstName: PropTypes.func.isRequired,
@@ -83,7 +82,7 @@ const CheckoutStepTwo = ({
     postalCode: typeof postalCode === 'number',
     phoneNumber: typeof phoneNumber === 'number',
     address1: address1.length > 2 && typeof address1 === 'string'
-  } 
+  }
 
   const warningValidator = (x) => {
     if(x) {
@@ -110,7 +109,7 @@ const CheckoutStepTwo = ({
           </Alert>
         )
       }
-    } 
+    }
   }
 
   return (
@@ -178,7 +177,7 @@ const CheckoutStepTwo = ({
               } else {
                 formValidator(true)
               }
-              
+
               }}>Продолжить</Button>
         </div>
       </Row>
