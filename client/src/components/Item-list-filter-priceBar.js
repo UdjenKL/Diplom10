@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Slider from 'react-rangeslider';
 import '../style/rangeslider.min.css';
- 
+
 const propTypes = {
   actionPriceRangeFilter: PropTypes.func.isRequired,
   reducerPriceRangeFilter: PropTypes.number.isRequired,
@@ -14,19 +14,19 @@ const styles = {
 };
 
 const ProductListFilterPriceBar = ({
-  actionPriceRangeFilter, 
+  actionPriceRangeFilter,
   reducerPriceRangeFilter
 }) => (
     <div>
       <Slider
-        max={50000}
-        step={1000}
+        max={1000}
+        step={50}
         value={reducerPriceRangeFilter}
         onChange={actionPriceRangeFilter}
       />
       <div style={styles}>
         <span>
-          мин 
+          мин
         </span>
         <span>
           макс

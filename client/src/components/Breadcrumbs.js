@@ -100,8 +100,8 @@ const Breadcrumbs = ({
       </Col>
 
   const genderMap = {
-    men: 'Мужские',
-    women: 'Женские'
+    men: 'Мужчинам',
+    women: 'Женщинам'
   }
   const genderLink = gender && <Fragment><Link style={styles.linkColor} to={`/category/${gender}`}>{` ${gender && genderMap[gender]} букеты`}</Link> ></Fragment>;
   const selectedItem = selectedCategory.length === 1 ? ' '+selectedCategory : selectedCategory.length > 1 ? ' Несколько критерии' : ' Выбор категории'

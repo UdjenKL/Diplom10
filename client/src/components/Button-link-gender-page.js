@@ -4,7 +4,7 @@ import {
   isMobile
 } from "react-device-detect";
 import { Button } from 'reactstrap';
-import { Link } from 'react-router-dom' 
+import { Link } from 'react-router-dom'
 
 const propTypes = {
   gender: PropTypes.string.isRequired
@@ -26,14 +26,14 @@ const styles = {
 }
 
 const genderMap = {
-  men: 'Мужские',
-  women: 'Женские'
+  men: 'Мужчинам',
+  women: 'Женщинам'
 }
 
 const ButtonLinkGenderPage = ({gender, content=gender}) => {
 
   const {buttonStylePc, buttonStyleMobile } = styles
-  
+
   return <Link to={`/category/${gender}`} className="text-white"><Button size={isMobile ? 'md' : 'lg'} color="light" style={isMobile ? buttonStyleMobile : buttonStylePc}>{genderMap[content]}</Button></Link>
 }
 

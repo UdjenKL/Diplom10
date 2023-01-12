@@ -34,17 +34,17 @@ const categoriesMenData = [
   },
   {
     imgSrc:'/images/presents/2.jpg',
-    cardTitle:'К пиву',
+    cardTitle:'Мясные',
     linkCategory:'Shirts'
   },
   {
     imgSrc:'/images/presents/3.jpg',
-    cardTitle:'Цветы',
+    cardTitle:'Праздничные',
     linkCategory:'Pants'
   },
   {
     imgSrc:'/images/presents/4.jpg',
-    cardTitle:'Мясные',
+    cardTitle:'Премиум',
     linkCategory:'Jackets'
   }
 ];

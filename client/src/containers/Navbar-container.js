@@ -6,7 +6,7 @@ import {
 import { connect } from 'react-redux'
 import { oneKeywordForFilter, resetKeywords} from '../actions/DataFetchingActions';
 import { selectorTotalItemsCart } from '../selectors/selector_list_statistics';
-import CheckoutMiniSummaryPreview from '../components/Checkout-mini-summary-preview'; 
+import CheckoutMiniSummaryPreview from '../components/Checkout-mini-summary-preview';
 import Submenu from '../components/Submenu';
 import {
   Collapse,
@@ -38,8 +38,8 @@ const styles = {
 }
 
 const genderMap = {
-  men: 'Мужские',
-  women: 'Женские'
+  men: 'Мужчинам',
+  women: 'Женщинам'
 }
 
 const arrowStyleSubmenu = (subMenuCategorySelected, gender, arrowDown) => subMenuCategorySelected === gender && <div style={arrowDown}></div>
@@ -76,7 +76,7 @@ class NavbarContainer extends Component {
     })
   }
 
-  
+
 
   render() {
     const { sendOneKeyword, getCart, resetKeywords, totalItemsSelectorStats } = this.props
@@ -85,7 +85,7 @@ class NavbarContainer extends Component {
     const { itemMenu, arrowDown, navbarBackground } = styles
 
     const categoriesNavItems = gender =>
-    isBrowser ?            
+    isBrowser ?
       (<NavItem style={itemMenu} onMouseEnter={()=>this.handleSubMenuEnter(gender)} >
         <NavLink to={`/category/${gender}`}  className="text-white" onClick={()=>resetKeywords()}>{genderMap[gender]}</NavLink> {arrowStyleSubmenu(subMenuCategorySelected, gender, arrowDown)}
       </NavItem>) :
@@ -93,11 +93,11 @@ class NavbarContainer extends Component {
       <NavLink to={`/category/${gender}`}  className="text-white" onClick={()=>{return (resetKeywords(), this.toggle())}}>{genderMap[gender]}</NavLink>
     </NavItem>)
 
-    const cartNavItem = 
-    isBrowser ?  
+    const cartNavItem =
+    isBrowser ?
       (<Nav className="ml-auto" navbar style={{cursor: 'pointer'}}>
       <NavItem>
-        <div onClick={()=>this.setState({ openCartPreview: !openCartPreview })} className="text-white">Корзина 
+        <div onClick={()=>this.setState({ openCartPreview: !openCartPreview })} className="text-white">Корзина
           <Badge color="success" pill>
             {totalItemsSelectorStats}
           </Badge>
@@ -110,12 +110,12 @@ class NavbarContainer extends Component {
       }
     </Nav>) : <NavItem style={itemMenu}><NavLink to='/cart'  className="text-white" onClick={this.toggle}>cart</NavLink></NavItem>
 
-    const subMenuHoverBrowser = 
-      subMenuOpen && isBrowser && 
-        <Submenu 
-          gender={subMenuCategorySelected} 
-          itemsListByGender={subMenuCategorySelected === 'men' ? men : women} 
-          sendOneKeyword={sendOneKeyword} 
+    const subMenuHoverBrowser =
+      subMenuOpen && isBrowser &&
+        <Submenu
+          gender={subMenuCategorySelected}
+          itemsListByGender={subMenuCategorySelected === 'men' ? men : women}
+          sendOneKeyword={sendOneKeyword}
           handleSubMenuExit={this.handleSubMenuExit}
         />
 
