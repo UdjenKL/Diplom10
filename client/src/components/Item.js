@@ -135,7 +135,7 @@ class Item extends Component {
               </div>
               <div style={styles}>
                 <p>
-                  Выбрать цвет:{" "}
+                  Выбрать цвет упаковки:{" "}
                   {selectedColor === "" ? <i>Выберите ниже</i> : selectedColor}
                 </p>
                 <ButtonsColorSelect

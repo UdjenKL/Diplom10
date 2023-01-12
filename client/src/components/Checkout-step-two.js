@@ -131,8 +131,9 @@ const CheckoutStepTwo = ({
         <Col md={12} style={styles.formFieldsSpace}>
           <Label for="exampleSelect">Страна</Label>
           <Input type="select" name="select" onChange={onChangeCountry} value={country}>
-            <option value='RUSSIA'>RUSSIA</option>
-            <option value='KAZAKHSTAN'>KAZAKHSTAN</option>
+            <option value='Belarus'>Беларусь</option>
+            <option value='Poland'>Польша</option>
+            <option value='Ukraine'>Украина</option>
           </Input>
         </Col>
         <Col md={6} style={styles.formFieldsSpace}>
