@@ -95,7 +95,7 @@ const Cart = ({
                 <b>Промежуточный итог</b>
               </td>
               <td>
-                <b>{reducePrice} ₸</b>
+                <b>{reducePrice} бел.р</b>
               </td>
             </tr>
             <tr>

@@ -54,7 +54,7 @@ export default class AdminTableOrders extends Component {
               <th scope="row">{index+1}</th>
 
               <td>{x.createdAt}</td>
-              <td>{x.order.map(item=> <div>{`x${item.quantity} (${item.titleItem}[${item.selectedSize}, ${item.selectedColor}] ${item.price}₸) `}</div>)}</td>
+              <td>{x.order.map(item=> <div>{`x${item.quantity} (${item.titleItem}[${item.selectedSize}, ${item.selectedColor}] ${item.price}бел.р) `}</div>)}</td>
               <td>{x.totalAmount+ ' Р'}</td>
 
               <td>{x.customerinfo.email}</td>

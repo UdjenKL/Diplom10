@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import StarRatings from 'react-star-ratings';
-import { 
+import {
   Col,
-  Card, 
+  Card,
   CardImg
 } from 'reactstrap';
 
@@ -36,9 +36,9 @@ const EachItemInList = ({
   FilteredSortedList,
   currentPage,
   itemsMaxPage
-}) => {  
-  return (FilteredSortedList.slice((currentPage-1)*itemsMaxPage,itemsMaxPage*currentPage).map(x => 
-    <Col md="4" key={x._id}> 
+}) => {
+  return (FilteredSortedList.slice((currentPage-1)*itemsMaxPage,itemsMaxPage*currentPage).map(x =>
+    <Col md="4" key={x._id}>
       <Card style={styles.spaceColumn}>
         <Link to={`/item/${x._id}/${x.title.split(' ').join('-')}`} className="text-white">
           <CardImg top width="100%" src={x.images[0]} alt="Card image cap" />
@@ -55,7 +55,7 @@ const EachItemInList = ({
               numberOfStars={5}
               name='rating'
               />
-            <p className="text-muted">{x.price} ₸</p>
+            <p className="text-muted">{x.price} бел.р</p>
           </div>
       </Card>
     </Col>

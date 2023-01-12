@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import { isMobile } from "react-device-detect"; 
+import { isMobile } from "react-device-detect";
 import { Link } from 'react-router-dom';
 import ButtonSorter from './Button-sorter';
 import ButtonFilterMobile from './Button-filter-mobile';
@@ -28,14 +28,14 @@ const propTypes = {
 };
 
 const Breadcrumbs = ({
-  gender, 
-  selectedCategory, 
-  backgroundColor, 
-  textColor, 
-  marginTop, 
+  gender,
+  selectedCategory,
+  backgroundColor,
+  textColor,
+  marginTop,
   showSortBtn,
-  showFilterBtn, 
-  dispatchToSortList, 
+  showFilterBtn,
+  dispatchToSortList,
   sortArgsForFilter,
   dispatchSize,
   sortSizeForFilter,
@@ -75,12 +75,12 @@ const Breadcrumbs = ({
       color: textColor
     }
   }
- 
-  const sortBtn = 
-    showSortBtn && 
+
+  const sortBtn =
+    showSortBtn &&
       <Col sm={{ size: 'auto', offset: 6 }} style={styles.sortBtnMobileScreen}>
         {showFilterBtn &&
-          <ButtonFilterMobile 
+          <ButtonFilterMobile
             buttonLabel='Filter the list'
             gender={gender}
             dispatchSize={dispatchSize}
@@ -91,11 +91,11 @@ const Breadcrumbs = ({
             actionPriceRangeFilter={actionPriceRangeFilter}
             reducerPriceRangeFilter={reducerPriceRangeFilter}
             listLength={listLength}
-          /> 
-        }  
-        <ButtonSorter 
-          dispatchToSortList={dispatchToSortList} 
-          sortArgsForFilter={sortArgsForFilter} 
+          />
+        }
+        <ButtonSorter
+          dispatchToSortList={dispatchToSortList}
+          sortArgsForFilter={sortArgsForFilter}
         />
       </Col>
 
@@ -103,8 +103,8 @@ const Breadcrumbs = ({
     men: 'Мужские',
     women: 'Женские'
   }
-  const genderLink = gender && <Fragment><Link style={styles.linkColor} to={`/category/${gender}`}>{` ${gender && genderMap[gender]} одежды`}</Link> ></Fragment>; 
-  const selectedItem = selectedCategory.length === 1 ? ' '+selectedCategory : selectedCategory.length > 1 ? ' Несколько критерии' : ' Выбор категории'      
+  const genderLink = gender && <Fragment><Link style={styles.linkColor} to={`/category/${gender}`}>{` ${gender && genderMap[gender]} букеты`}</Link> ></Fragment>;
+  const selectedItem = selectedCategory.length === 1 ? ' '+selectedCategory : selectedCategory.length > 1 ? ' Несколько критерии' : ' Выбор категории'
   return (
     <div style={isMobile ? styles.containerMobileScreen : styles.containerPcScreen}>
       <Container>

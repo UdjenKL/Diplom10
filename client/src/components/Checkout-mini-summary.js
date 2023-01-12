@@ -12,7 +12,7 @@ const CheckoutMiniSummary = ({ getCart, selectorTotalAmountCart }) => (
       getCart.map(x=>
         <Row key={x._id}>
           <Col xs='8'><p>x{x.quantity} {x.title}</p></Col>
-          <Col xs='4'><p>{x.price}Р</p></Col>
+          <Col xs='4'><p>{x.price}бел.р</p></Col>
         </Row>
       )
     }
@@ -20,13 +20,13 @@ const CheckoutMiniSummary = ({ getCart, selectorTotalAmountCart }) => (
     <ListGroupItem>
       <Row>
         <Col xs='8'><p>Промежуточный итог</p></Col>
-        <Col xs='4'><p>{selectorTotalAmountCart}₸</p></Col>
+        <Col xs='4'><p>{selectorTotalAmountCart}бел.р</p></Col>
       </Row>
     </ListGroupItem>
     <ListGroupItem>
       <Row>
         <Col xs='8'><p>Всего</p></Col>
-        <Col xs='4'><b style={{fontSize: '25px'}}>{selectorTotalAmountCart}₸</b></Col>
+        <Col xs='4'><b style={{fontSize: '25px'}}>{selectorTotalAmountCart}бел.р</b></Col>
       </Row>
     </ListGroupItem>
   </ListGroup>

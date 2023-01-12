@@ -16,7 +16,7 @@ const ItemsListHtagsLabel = ({
   sortArgsForFilter
 }) => {
 
-  const priceLabel = keywordsForFilter.length> 0 && <Badge style={{padding: '10px', margin:'10px'}} color='success'>{`#Цена<${reducerPriceRangeFilter} ₸`} </Badge>
+  const priceLabel = keywordsForFilter.length> 0 && <Badge style={{padding: '10px', margin:'10px'}} color='success'>{`#Цена<${reducerPriceRangeFilter} бел.р`} </Badge>
   const sizeLabel = keywordsForFilter.length> 0 && <Badge style={{padding: '10px', margin:'10px'}} color='info'>{`#Размеры${sortSizeForFilter === 'Все' ? 's' : ''}: ${sortSizeForFilter}`} </Badge>
   const sortLabel = keywordsForFilter.length> 0 && <Badge style={{padding: '10px', margin:'10px'}} color='danger'>{`#Сортировка: ${sortArgsForFilter}`} </Badge>
   const categoriesLabel = keywordsForFilter.map(x=><Badge style={{padding: '10px', margin:'10px'}} color='light' key={x}>{`#${x}`} </Badge>)

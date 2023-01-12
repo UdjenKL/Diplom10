@@ -20,10 +20,10 @@ const styles = {
 
 const items = [
   {
-    src: 'https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b17958c40e777065643cb65954bede79&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb',
+    src: '/images/presents/5.jpg',
     altText: 'Slide 1',
     caption: 'Slide 1',
-    title: 'Новая коллекция мужской одежды',
+    title: 'Новая коллекция букетов 2023',
     btn: {
       content: 'Перейти к коллекции',
       link: '/category/men'
@@ -31,11 +31,11 @@ const items = [
     }
   },
   {
-    src: 'https://images.unsplash.com/photo-1488826701985-4c18de62b405?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9ce707ffe1b3f8c031acc5788cf6aef2&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb',
+    src: '/images/presents/9.jpg',
     altText: 'Slide 2',
     caption: 'Slide 2',
-    title: "Коллекция женской одежды",
-    subtitle: 'Коллекция summer 2019',
+    title: "Коллекция букетов для женщин",
+    subtitle: 'Коллекция 2023',
     btn: {
       content: 'Перейти к коллекции',
       link: '/category/women'
@@ -92,7 +92,7 @@ class CarouselHomepage extends Component {
             <Col md="6" style={styles.sliderContent}>
               <h2>{x.title}</h2>
               <p>{x.subtitle}</p>
-              <ButtonInternalLink 
+              <ButtonInternalLink
                 content={x.btn.content}
                 link={x.btn.link}
                 lightOrDark='light'

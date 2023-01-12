@@ -7,9 +7,9 @@ import {
 import { Link } from 'react-router-dom';
 
 const propTypes = {
-  sendOneKeyword: PropTypes.func.isRequired, 
-  gender: PropTypes.string.isRequired, 
-  itemsListByGender: PropTypes.array.isRequired, 
+  sendOneKeyword: PropTypes.func.isRequired,
+  gender: PropTypes.string.isRequired,
+  itemsListByGender: PropTypes.array.isRequired,
   handleSubMenuExit: PropTypes.func.isRequired
 }
 
@@ -19,9 +19,9 @@ const styles = {
     width: '100%',
     height: '250px',
     backgroundColor:'rgba(255, 255, 255, 0.9)',
-    position: 'absolute', 
-    top:'0', 
-    left:'0', 
+    position: 'absolute',
+    top:'0',
+    left:'0',
     zIndex:'2'
   },
   subMenuImage: {
@@ -42,23 +42,23 @@ const styles = {
 }
 
 const Submenu = ({
-  sendOneKeyword, 
-  gender, 
-  itemsListByGender, 
+  sendOneKeyword,
+  gender,
+  itemsListByGender,
   handleSubMenuExit
 }) => (
   <div style={styles.subMenu} onMouseLeave={handleSubMenuExit}>
     <Row>
       <Col md="3">
-        <img alt={gender} style={styles.subMenuImage} src={gender === 'men' ? 
-        'https://images.unsplash.com/photo-1517940310602-26535839fe84?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=21ab82056a192c9d84ddee58858c06c6&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb' :
-        'https://images.unsplash.com/photo-1505262933601-3e5deed74427?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3f3073db53c47bc6cf92b6a9d0fbadd8&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb'} />
+        <img alt={gender} style={styles.subMenuImage} src={gender === 'men' ?
+        '/images/presents/7.jpg' :
+        '/images/presents/9.jpg'} />
         </Col>
         <Col style={styles.subMenuCategories}>
           <p><strong>Категории</strong></p>
           <div style={styles.subMenuCategoriesUl}>
             {
-              itemsListByGender.map(x => <div key={x} onClick={()=>sendOneKeyword(x)}><Link to={`/productslist/${gender}`} style={styles.subMenuCategory}> {x}</Link></div>) 
+              itemsListByGender.map(x => <div key={x} onClick={()=>sendOneKeyword(x)}><Link to={`/productslist/${gender}`} style={styles.subMenuCategory}> {x}</Link></div>)
             }
           </div>
         </Col>

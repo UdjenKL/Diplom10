@@ -46,7 +46,7 @@ const ItemsListSidebar = ({
         oneKeywordForFilter={oneKeywordForFilter}
         actionFillFilters={actionFillFilters}
       />
-    <h4 style={styles.subTitles}>Размеры</h4>
+    <h4 style={styles.subTitles}>Размер букета</h4>
       <ItemsListFilterSize
         dispatchSize={dispatchSize}
         sortSizeForFilter={sortSizeForFilter}

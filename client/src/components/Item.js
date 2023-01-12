@@ -108,7 +108,7 @@ class Item extends Component {
             </Col>
             <Col md="5">
               <h1>{infoItem.title}</h1>
-              <div>{infoItem.price} ₸</div>
+              <div>{infoItem.price} бел.р</div>
               <StarRatings
                 rating={infoItem.rating}
                 starDimension="15px"
