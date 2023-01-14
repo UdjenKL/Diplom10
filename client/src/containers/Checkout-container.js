@@ -19,7 +19,7 @@ class CheckoutContainer extends Component {
       emailIsValid: true,
       firstName: '',
       lastName: '',
-      country: 'KAZAKHSTAN',
+      country: 'MINSK',
       city: '',
       province: '',
       postalCode: 101100,
@@ -47,21 +47,21 @@ class CheckoutContainer extends Component {
   formValidator = formIsValid => this.setState({ formIsValid });
 
   toggle = step => {
-    step === 'step1' ? this.setState({ 
+    step === 'step1' ? this.setState({
       step1: true,
       step2: false,
       step3: false
-    }) : 
-    step === 'step2' ? this.setState({ 
+    }) :
+    step === 'step2' ? this.setState({
       step1: false,
       step2: true,
       step3: false
     }) :
-    step === 'step3' && this.setState({ 
+    step === 'step3' && this.setState({
       step1: false,
       step2: false,
       step3: true
-    }) 
+    })
   };
 
   stepsUnlock = step => {
@@ -76,7 +76,7 @@ class CheckoutContainer extends Component {
     axios.post('/api/add/orders', {
       ref,
       customerinfo: {email, firstName, lastName, country, city, province, postalCode, phoneNumber, address1, address2},
-      order: getCart.map(x => ({idItem: x._id, titleItem:x.title, selectedSize:x.selectedSize, selectedColor:x.selectedColor, price:x.price, quantity:x.quantity})), 
+      order: getCart.map(x => ({idItem: x._id, titleItem:x.title, selectedSize:x.selectedSize, selectedColor:x.selectedColor, price:x.price, quantity:x.quantity})),
       totalDelivery,
       totalAmount: selectorTotalAmountCart
     })
@@ -93,9 +93,9 @@ class CheckoutContainer extends Component {
   render() {
     return (
       <div>
-      <Checkout 
-        {...this.state} 
-        {...this.props} 
+      <Checkout
+        {...this.state}
+        {...this.props}
         onChangeFirstName={this.onChangeFirstName}
         onChangeLastName={this.onChangeLastName}
         onChangeCountry={this.onChangeCountry}
@@ -120,7 +120,7 @@ class CheckoutContainer extends Component {
 };
 
 
-const mapStateToProps = state => ({ 
+const mapStateToProps = state => ({
   getCart: state.cartReducer,
   getUserAddress: state.getUserAddress,
   selectorTotalAmountCart: selectorTotalAmountCart(state)
