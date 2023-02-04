@@ -28,22 +28,22 @@ const styles = {
 
 const categoriesMenData = [
   {
-    imgSrc:'/images/presents/1.jpg',
-    cardTitle:'Сладкие',
+    imgSrc:'/images/presents/meat/7.jpg',
+    cardTitle:'Мясные',
     linkCategory:'Букеты'
   },
   {
-    imgSrc:'/images/presents/2.jpg',
-    cardTitle:'Мясные',
+    imgSrc:'/images/presents/alco/4.jpg',
+    cardTitle:'Алкогольные',
     linkCategory:'Shirts'
   },
   {
-    imgSrc:'/images/presents/3.jpg',
-    cardTitle:'Праздничные',
+    imgSrc:'/images/presents/fish/3.jpg',
+    cardTitle:'Рыбные',
     linkCategory:'Pants'
   },
   {
-    imgSrc:'/images/presents/4.jpg',
+    imgSrc:'/images/presents/premium/1.jpg',
     cardTitle:'Премиум',
     linkCategory:'Jackets'
   }
@@ -51,23 +51,23 @@ const categoriesMenData = [
 
 const categoriesWomenData = [
   {
-    imgSrc:'/images/presents/5.jpg',
+    imgSrc:'/images/presents/sweet/sweet6.jpg',
     cardTitle:'Сладкие',
     linkCategory:'Dresses'
   },
   {
-    imgSrc:'/images/presents/6.jpg',
-    cardTitle:'С цветами',
+    imgSrc:'/images/presents/fruity/1.jpg',
+    cardTitle:'Фруктовые',
     linkCategory:'Cardigans'
   },
   {
-    imgSrc:'/images/presents/7.jpg',
-    cardTitle:'Мясные',
+    imgSrc:'/images/presents/flowers/2.jpg',
+    cardTitle:'Цветочные',
     linkCategory:'Tops'
   },
   {
-    imgSrc:'/images/presents/8.jpg',
-    cardTitle:'К Дню Рождения',
+    imgSrc:'/images/presents/premium/1.jpg',
+    cardTitle:'Премиум',
     linkCategory:'Trench Coats'
   }
 ];
@@ -94,7 +94,7 @@ const eachCategory = (gender, oneKeywordForFilter) => (
 
 const genderMap = {
   women: 'Женщинам',
-  men: 'Мужщинам'
+  men: 'Мужчинам'
 }
 const ItemsListGenderHomepage = props => {
   const { gender } = props.match.params

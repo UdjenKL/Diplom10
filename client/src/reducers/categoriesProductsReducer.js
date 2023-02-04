@@ -2,8 +2,8 @@ import { CATEGORIES_PRODUCTS } from '../constants.js'
 
 const defaultState =
 {
-	men: ['Сладкие', 'Мясные', 'Праздничные', 'Премиум'],
-	women: ['Сладкие', 'Мясные', 'Праздничные', 'Премиум']
+	men: ['Мясные', 'Алкогольные', 'Рыбные','Премиум'],
+	women: ['Сладкие', 'Фруктовые', 'Цветочные', 'Премиум']
 }
 
 export const categoriesProducts = (state = defaultState, action) => {

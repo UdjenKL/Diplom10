@@ -59,7 +59,7 @@ class AdminFormAddItem extends Component {
       <Form>
         <FormGroup>
           <Label for="exampleEmail">Имя товара</Label>
-          <Input placeholder='example: cool polo' value={this.state.title} onChange={this.onChangeTitle} />
+          <Input placeholder='example: Sweet bouquet' value={this.state.title} onChange={this.onChangeTitle} />
         </FormGroup>
         <FormGroup>
           <Label for="exampleEmail">Цена</Label>
@@ -71,15 +71,15 @@ class AdminFormAddItem extends Component {
         </FormGroup>
         <FormGroup>
           <Label for="exampleEmail">Доступные размеры</Label>
-          <Input placeholder='example: XS, L, XL' value={this.state.size} onChange={this.onChangesize} />
+          <Input placeholder='example: XL, L, M, S, XS' value={this.state.size} onChange={this.onChangesize} />
         </FormGroup>
         <FormGroup>
           <Label for="exampleEmail">Категория</Label>
-          <Input placeholder='example: Polo' value={this.state.tags} onChange={this.onChangeTags} />
+          <Input placeholder='example: Сладкие,Мясные,Праздничные,Премиум' value={this.state.tags} onChange={this.onChangeTags} />
         </FormGroup>
         <FormGroup>
           <Label for="exampleEmail">Изображения</Label>
-          <Input placeholder='example: http://link1.jpg, http://link2.jpg' value={this.state.images} onChange={this.onChangeImages} />
+          <Input placeholder='example: http://link1.jpg, http://link2.jpg /images/presents/meat/1.jpg' value={this.state.images} onChange={this.onChangeImages} />
         </FormGroup>
         <FormGroup>
           <Label for="examplePassword">Описание</Label>
@@ -87,14 +87,14 @@ class AdminFormAddItem extends Component {
         </FormGroup>
       </Form>
     <Button onClick={()=>this.onSubmit(
-        title, 
-        price, 
-        color, 
-        size, 
+        title,
+        price,
+        color,
+        size,
         tags,
         images,
         description
-        )}>Сохранить</Button>  
+        )}>Сохранить</Button>
       </Container>
     );
   }
